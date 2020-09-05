@@ -1,3 +1,5 @@
+//class to implement asynchronous function for http requests, using http package.
+
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
@@ -7,15 +9,16 @@ class NetworkHelper {
   final String url;
 
   Future getData() async {
-    http.Response response = await http.get(url);
-
+    try{http.Response response = await http.get(url);
     if (response.statusCode == 200) {
       String data = response.body;
-
       return jsonDecode(data);
-    }
-    else {
-      print(response.statusCode);
+    }else {
+      print('statusCode: ${response.statusCode}');
+      return response.statusCode;
+    }}
+    catch(e){
+      print('getData: ${e}');
     }
   }
 }

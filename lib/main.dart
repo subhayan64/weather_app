@@ -1,5 +1,14 @@
+///Weather is a weather forecasting app developed using flutter.
+///
+///Using OpenWeatherMap's [https://openweathermap.org/] API to fetch the
+///weather forecast for a coordinate or a user entered city.
+///
+///Flutter app developed by Subhayan Mukhopadhyay [https://github.com/subhayan64]
+
 import 'package:flutter/material.dart';
-import 'package:weatherapp/screens/loading_screen.dart';
+import 'screens/city_screen.dart';
+import 'screens/loading_screen.dart';
+import 'screens/get_city_loading_screen.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -8,7 +17,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData.dark(),
-      home: LoadingScreen(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => CityScreen(),
+        '/loadingScreen': (context) => LoadingScreen(),
+        '/cityLoadingScreen': (context) => CityLoadingScreen(),
+      },
     );
   }
 }
