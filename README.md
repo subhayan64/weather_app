@@ -1,8 +1,12 @@
 # Weather App
 
-Weather displaying flutter app.
+A weather forecasting app with minimalistic UI design developed using flutter.
 
-## What I learned
+Using OpenWeatherMap's [https://openweathermap.org/] API to fetch the weather forecast for a coordinate(location of user's device) or a user entered city.
 
-Location, Networking and Asynchronous Dart programming.
+Flutter app developed by Subhayan Mukhopadhyay [https://github.com/subhayan64]
+
+## What I learnt
+
+Location, Networking, Navigating Routes, Implementing API calls and Asynchronous Dart programming.
 
